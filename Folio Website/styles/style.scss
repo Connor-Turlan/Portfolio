@@ -1,0 +1,127 @@
+@use "./partials/palette";
+@use "./partials/typography";
+@use "./partials/devices";
+
+@use "./modules/defaults.scss";
+@use "./modules/navbar.scss";
+
+body {
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header {
+	@include defaults.flex-center;
+
+	width: 100%;
+
+	padding: 30px;
+
+	color: palette.$highlight;
+	background-color: palette.$light;
+
+	box-shadow: 0px 6px 24px palette.$shadow;
+}
+
+.body {
+	@include devices.phone {
+		width: 100vw;
+	}
+	@include devices.desktop {
+		width: 800px;
+	}
+
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	color: palette.$highlight;
+	background-color: palette.$light;
+
+	box-shadow: 0px 6px 24px palette.$shadow;
+
+	&__section {
+		height: 100%;
+		padding: 40px;
+	}
+
+	&__odd {
+		background-color: palette.$neutral;
+	}
+
+	&__even {
+		background-color: palette.$light;
+	}
+}
+
+.languages {
+	display: grid;
+	grid-template-columns: 120px 120px 120px;
+	justify-content: center;
+
+	list-style: none;
+
+	&__icon {
+		@include defaults.flex-center;
+
+		height: 100px;
+		width: 100px;
+
+		margin: 10px;
+
+		/* color: palette.$highlight; */
+		background-color: palette.$neutral;
+
+		font-size: 72px;
+	}
+}
+
+.about {
+	@include defaults.flex-center;
+	flex-direction: column;
+
+	height: 90vh;
+
+	&__title {
+		display: block;
+	}
+
+	&__content {
+		@include defaults.flex-center;
+
+		@include devices.phone {
+			flex-direction: column;
+		}
+		@include devices.desktop {
+			flex-direction: row;
+		}
+	}
+
+	&__image {
+		@include devices.phone {
+			width: 40vw;
+			height: 40vw;
+		}
+		@include devices.desktop {
+			width: 200px;
+			height: 200px;
+		}
+
+		margin: 20px;
+	}
+}
+
+* {
+	margin: 0px;
+	font-family: typography.$main;
+}
+
+.project__container {
+	@include defaults.flex-center;
+	height: 100vh;
+}

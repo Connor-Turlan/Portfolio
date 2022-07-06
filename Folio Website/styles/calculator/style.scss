@@ -1,0 +1,113 @@
+@use "../partials/palette";
+
+@use "../modules/defaults.scss";
+
+.main {
+	@include defaults.flex-center;
+}
+
+.btn {
+	@include defaults.flex-center;
+
+	width: 60px;
+	height: 60px;
+
+	margin: 10px;
+	border: 1px solid palette.$dark;
+
+	border-radius: 15px;
+
+	box-shadow: -4px -4px 10px rgb(255, 255, 255, 0.4),
+		4px 4px 10px rgba(0, 0, 0, 0.6);
+
+	background-color: palette.$neutral;
+	color: white;
+
+	user-select: none;
+
+	&--function {
+		background-color: palette.$light;
+		color: white;
+	}
+
+	&:hover {
+		background-color: palette.$bright;
+	}
+
+	&:active {
+		box-shadow: -4px -4px 10px rgb(255, 255, 255, 0.2),
+			4px 4px 10px rgba(0, 0, 0, 0.3);
+	}
+}
+
+.calculator {
+	display: grid;
+	grid-template-rows: 1fr 4fr;
+
+	border: 2px solid palette.$dark;
+	padding: 10px;
+
+	border-radius: 10px;
+
+	background-color: palette.$bright;
+
+	box-shadow: -8px -8px 20px rgb(255, 255, 255, 0.2),
+		8px 8px 16px rgba(0, 0, 0, 0.2);
+
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: bold;
+
+	&__display {
+		@include defaults.flex-center;
+		flex-direction: column;
+
+		background-color: white;
+		color: palette.$dark;
+
+		margin: 2px;
+		border: 1px solid palette.$dark;
+
+		border-radius: 0px;
+
+		&--flags {
+			display: flex;
+			flex-direction: row;
+			justify-content: end;
+
+			width: 100%;
+		}
+
+		&--flag {
+			@include defaults.flex-center;
+
+			width: 20px;
+			height: 20px;
+
+			margin: 2px;
+			border: 1px solid palette.$dark;
+
+			border-radius: 5px;
+
+			&-hidden {
+				display: none;
+			}
+		}
+	}
+
+	&__result {
+		@include defaults.flex-center;
+
+		height: 100%;
+
+		background-color: white;
+		color: palette.$dark;
+		/* border: 1px solid black; */
+
+		border-radius: 0px;
+	}
+
+	&__container {
+		display: grid;
+		grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+	}
+}

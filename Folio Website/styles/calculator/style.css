@@ -1,0 +1,100 @@
+/* $dark: #0f110c;
+$neutral: #cecccc;
+$light: #9d6381;
+$highlight: #fdecef;
+$accent: #612940; */
+.background {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #4c3a51;
+  z-index: -1;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border: 1px solid #4c3a51;
+  border-radius: 15px;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.4), 4px 4px 10px rgba(0, 0, 0, 0.6);
+  background-color: #774360;
+  color: white;
+  user-select: none;
+}
+.btn--function {
+  background-color: #b25068;
+  color: white;
+}
+.btn:hover {
+  background-color: #e7ab79;
+}
+.btn:active {
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.2), 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.calculator {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  border: 2px solid #4c3a51;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #e7ab79;
+  box-shadow: -8px -8px 20px rgba(255, 255, 255, 0.2), 8px 8px 16px rgba(0, 0, 0, 0.2);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+.calculator__display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  color: #4c3a51;
+  margin: 2px;
+  border: 1px solid #4c3a51;
+  border-radius: 0px;
+}
+.calculator__display--flags {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 100%;
+}
+.calculator__display--flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  border: 1px solid #4c3a51;
+  border-radius: 5px;
+}
+.calculator__display--flag-hidden {
+  display: none;
+}
+.calculator__result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: white;
+  color: #4c3a51;
+  /* border: 1px solid black; */
+  border-radius: 0px;
+}
+.calculator__container {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
+}
