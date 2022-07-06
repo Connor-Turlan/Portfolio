@@ -91,7 +91,8 @@ $accent: #612940; */
   height: 100%;
   background-color: white;
   color: #4c3a51;
-  /* border: 1px solid black; */
+  border: 1px solid black;
+  font-size: 32px;
   border-radius: 0px;
 }
 .calculator__container {

@@ -85,7 +85,8 @@ body {
   justify-content: space-between;
   color: white;
   background-color: #b25068;
-  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.2470588235);
+  /* 
+  box-shadow: 0px 6px 24px palette.$shadow; */
 }
 @media only screen and (max-width: 800px) {
   .body {
