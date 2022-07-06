@@ -16,6 +16,11 @@ class Calculator {
 	pushValue(value) {
 		this.buffer += value;
 
+		/* // if the characters would overflow the screen, push error instead.
+		if (this.buffer.length >= 18) {
+			this.buffer = "             Error";
+		} */
+
 		this.showBuffer();
 	}
 

@@ -23,9 +23,13 @@
 	background-color: palette.$neutral;
 	color: white;
 
+	font-size: 36px;
+
 	user-select: none;
 
 	&--function {
+		font-size: 20px;
+
 		background-color: palette.$light;
 		color: white;
 	}
@@ -98,12 +102,13 @@
 		@include defaults.flex-center;
 
 		height: 100%;
+		max-width: 18ch;
 
 		background-color: white;
 		color: palette.$dark;
 		/* border: 1px solid black; */
 
-		font-size: 32px;
+		font-size: 24px;
 
 		border-radius: 0px;
 	}

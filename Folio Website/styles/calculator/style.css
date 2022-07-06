@@ -30,9 +30,11 @@ $accent: #612940; */
   box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.4), 4px 4px 10px rgba(0, 0, 0, 0.6);
   background-color: #774360;
   color: white;
+  font-size: 36px;
   user-select: none;
 }
 .btn--function {
+  font-size: 20px;
   background-color: #b25068;
   color: white;
 }
@@ -89,10 +91,11 @@ $accent: #612940; */
   justify-content: center;
   align-items: center;
   height: 100%;
+  max-width: 18ch;
   background-color: white;
   color: #4c3a51;
-  border: 1px solid black;
-  font-size: 32px;
+  /* border: 1px solid black; */
+  font-size: 24px;
   border-radius: 0px;
 }
 .calculator__container {
