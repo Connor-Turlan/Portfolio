@@ -1,0 +1,59 @@
+/* $dark: #0f110c;
+$neutral: #cecccc;
+$light: #9d6381;
+$highlight: #fdecef;
+$accent: #612940; */
+.background {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #4c3a51;
+  z-index: -1;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.morse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  margin-top: 70px;
+  padding: 20px;
+  border-radius: 50px;
+  background: #774360;
+  box-shadow: 20px 20px 60px #2d2230, -20px -20px 60px #6b5272;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.morse__input {
+  margin: 20px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background: #774360;
+  box-shadow: inset 6px 6px 12px #bebebe, inset -6px -6px 12px #ffffff;
+  box-shadow: inset 6px 6px 12px #2d2230, inset -6px -6px 12px #6b5272;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.morse__input--morse {
+  font-family: "Courier", Courier, monospace;
+}
+.morse__btn {
+  margin: 20px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background: #774360;
+  box-shadow: 6px 6px 12px #2d2230, -6px -6px 12px #6b5272;
+  color: white;
+}
+.morse__btn:active {
+  box-shadow: 3px 3px 6px #2d2230, -3px -3px 6px #6b5272;
+}

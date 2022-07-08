@@ -14,13 +14,13 @@ class Calculator {
 
 	// push a value to the end of the line.
 	pushValue(value) {
+		// check that only one decimal is being added.
+		if (value == "." && (this.buffer.match(/(\.)/g) || []).length >= 1) {
+			value = "";
+		}
+
+		// push the character to the buffer and show.
 		this.buffer += value;
-
-		/* // if the characters would overflow the screen, push error instead.
-		if (this.buffer.length >= 18) {
-			this.buffer = "             Error";
-		} */
-
 		this.showBuffer();
 	}
 

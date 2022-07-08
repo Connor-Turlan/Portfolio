@@ -5,6 +5,11 @@
 @use "./modules/defaults.scss";
 @use "./modules/navbar.scss";
 
+* {
+	margin: 0px;
+	font-family: typography.$main;
+}
+
 body {
 	height: 100%;
 
@@ -16,7 +21,7 @@ body {
 .header {
 	@include defaults.flex-center;
 
-	width: 100%;
+	/* width: 100%; */
 
 	padding: 30px;
 
@@ -47,7 +52,7 @@ body {
 
 	&__section {
 		height: 100%;
-		padding: 40px;
+		/* padding: 40px; */
 	}
 
 	&--odd {
@@ -120,15 +125,12 @@ body {
 	}
 }
 
-* {
-	margin: 0px;
-	font-family: typography.$main;
-}
-
 .project {
-	@extend .body;
+	//@extend .body;
 
 	@include defaults.flex-center;
+
+	padding: 40px;
 
 	&__container {
 		@include defaults.flex-center;
@@ -136,8 +138,31 @@ body {
 		height: 100vh;
 	}
 
+	&__desc {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__preview {
+		display: block;
+	}
+
 	&__img {
-		width: 400px;
-		height: 400px;
+		width: 200px;
+		height: 200px;
+
+		margin: 40px;
+
+		border-radius: 50px;
+
+		&--odd {
+			background: #774360;
+			box-shadow: 20px 20px 36px #532f43, -20px -20px 36px #9b577d;
+		}
+
+		&--even {
+			background: #b25068;
+			box-shadow: 20px 20px 36px #7d3849, -20px -20px 36px #e76887;
+		}
 	}
 }
