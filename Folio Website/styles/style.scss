@@ -50,11 +50,11 @@ body {
 		padding: 40px;
 	}
 
-	&__odd {
+	&--odd {
 		background-color: palette.$neutral;
 	}
 
-	&__even {
+	&--even {
 		background-color: palette.$light;
 	}
 }
@@ -91,6 +91,10 @@ body {
 		display: block;
 	}
 
+	&__subtitle {
+		display: block;
+	}
+
 	&__content {
 		@include defaults.flex-center;
 
@@ -121,7 +125,19 @@ body {
 	font-family: typography.$main;
 }
 
-.project__container {
+.project {
+	@extend .body;
+
 	@include defaults.flex-center;
-	height: 100vh;
+
+	&__container {
+		@include defaults.flex-center;
+
+		height: 100vh;
+	}
+
+	&__img {
+		width: 400px;
+		height: 400px;
+	}
 }
