@@ -111,6 +111,10 @@ body {
 		}
 	}
 
+	&__list {
+		list-style: none;
+	}
+
 	&__image {
 		@include devices.phone {
 			width: 40vw;
@@ -122,6 +126,8 @@ body {
 		}
 
 		margin: 20px;
+		border: 5px solid white;
+		border-radius: 5px;
 	}
 }
 
@@ -164,5 +170,17 @@ body {
 			background: #b25068;
 			box-shadow: 20px 20px 36px #7d3849, -20px -20px 36px #e76887;
 		}
+	}
+}
+
+.contact {
+	display: flex;
+	justify-content: space-between;
+
+	padding: 40px;
+
+	list-style: none;
+
+	&__info {
 	}
 }

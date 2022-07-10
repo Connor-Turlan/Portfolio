@@ -160,8 +160,13 @@ body {
     flex-direction: row;
   }
 }
+.about__list {
+  list-style: none;
+}
 .about__image {
   margin: 20px;
+  border: 5px solid white;
+  border-radius: 5px;
 }
 @media only screen and (max-width: 800px) {
   .about__image {
@@ -208,4 +213,11 @@ body {
 .project__img--even {
   background: #b25068;
   box-shadow: 20px 20px 36px #7d3849, -20px -20px 36px #e76887;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  list-style: none;
 }

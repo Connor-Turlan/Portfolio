@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Connor Turlan - Contact</title>
 		<link rel="stylesheet" href="../styles/style.css" />
+		<script src="../src/contact.js"></script>
 	</head>
 	<body>
 		<div class="background"></div>
@@ -23,6 +24,27 @@
 					copy email to clipboard - https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
 					linkin and github 
 			-->
+			<section class="body__section body--odd">
+				<h1 class="body__heading">Contact me via:</h1>
+				<ul class="contact">
+					<li
+						id="liEmail"
+						class="contact__info"
+						value="connorturlan@gmail.com"
+						onclick="copyToClipboard()"
+					>
+						<a href="">connorturlan@gmail.com</a>
+					</li>
+					<li class="contact__info">
+						<a href="https://www.linkedin.com/in/connor-turlan/"
+							>LinkedIn</a
+						>
+					</li>
+					<li class="contact__info">
+						<a href="https://github.com/Connor-Turlan">GitHub</a>
+					</li>
+				</ul>
+			</section>
 		</main>
 	</body>
 </html>
