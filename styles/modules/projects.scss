@@ -1,0 +1,54 @@
+@use "../partials/palette";
+@use "../partials/typography";
+@use "../partials/devices";
+
+@use "../modules/defaults.scss";
+
+.project {
+	@include defaults.flex-center;
+	@include devices.phone {
+		flex-direction: column;
+	}
+	@include devices.tablet {
+		flex-direction: column;
+	}
+	@include devices.desktop {
+		flex-direction: row;
+	}
+
+	padding: 40px;
+
+	&__container {
+		@include defaults.flex-center;
+
+		height: 100vh;
+	}
+
+	&__desc {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__preview {
+		display: block;
+	}
+
+	&__img {
+		width: 200px;
+		height: 200px;
+
+		margin: 40px;
+
+		border-radius: 50px;
+
+		&--odd {
+			background: #774360;
+			box-shadow: 20px 20px 36px #532f43, -20px -20px 36px #9b577d;
+		}
+
+		&--even {
+			background: #b25068;
+			box-shadow: 20px 20px 36px #7d3849, -20px -20px 36px #e76887;
+		}
+	}
+}

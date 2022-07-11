@@ -4,6 +4,8 @@
 
 @use "./modules/defaults.scss";
 @use "./modules/navbar.scss";
+@use "./modules/projects.scss";
+@use "./modules/contact.scss";
 
 * {
 	margin: 0px;
@@ -174,96 +176,5 @@ body {
 		margin: 20px;
 		border: 5px solid white;
 		border-radius: 5px;
-	}
-}
-
-.project {
-	@include defaults.flex-center;
-
-	padding: 40px;
-
-	&__container {
-		@include defaults.flex-center;
-
-		height: 100vh;
-	}
-
-	&__desc {
-		display: flex;
-		flex-direction: column;
-	}
-
-	&__preview {
-		display: block;
-	}
-
-	&__img {
-		width: 200px;
-		height: 200px;
-
-		margin: 40px;
-
-		border-radius: 50px;
-
-		&--odd {
-			background: #774360;
-			box-shadow: 20px 20px 36px #532f43, -20px -20px 36px #9b577d;
-		}
-
-		&--even {
-			background: #b25068;
-			box-shadow: 20px 20px 36px #7d3849, -20px -20px 36px #e76887;
-		}
-	}
-}
-
-.contact {
-	padding: 40px;
-
-	&__list {
-		display: grid;
-		@include devices.phone {
-			grid-template-columns: repeat(1, 1fr);
-			margin: 40px;
-		}
-
-		@include devices.tablet {
-			grid-template-columns: repeat(1, 1fr);
-			margin: 5vw;
-		}
-
-		@include devices.desktop {
-			grid-template-columns: repeat(3, 1fr);
-			margin: 40px;
-		}
-
-		padding: 0px;
-
-		list-style: none;
-	}
-
-	&__info {
-		@include defaults.flex-center;
-
-		margin: 10px;
-
-		font-size: 128px;
-		text-decoration: none;
-
-		&:link {
-			color: palette.$light;
-		}
-
-		&:visited {
-			color: palette.$light;
-		}
-
-		&:hover {
-			color: palette.$highlight;
-		}
-
-		&:active {
-			color: white;
-		}
 	}
 }

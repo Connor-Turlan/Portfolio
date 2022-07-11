@@ -55,6 +55,8 @@
 			align-self: start;
 			height: 70px;
 			width: 70px;
+
+			font-size: 50px;
 		}
 
 		@include devices.phone {
@@ -104,7 +106,8 @@
 			}
 
 			& + .navbar__menu--label::after {
-				content: "X";
+				color: white;
+				content: "\002716";
 			}
 		}
 	}
