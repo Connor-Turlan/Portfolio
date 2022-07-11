@@ -42,8 +42,9 @@
 		width: 70px;
 
 		align-self: start;
-
 		order: 1;
+
+		cursor: pointer;
 
 		&--label {
 			@include defaults.flex-center;

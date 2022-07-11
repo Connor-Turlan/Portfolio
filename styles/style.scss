@@ -4,6 +4,7 @@
 
 @use "./modules/defaults.scss";
 @use "./modules/navbar.scss";
+@use "./modules/index.scss";
 @use "./modules/projects.scss";
 @use "./modules/contact.scss";
 
@@ -44,7 +45,7 @@ body {
 		width: 800px;
 	}
 
-	height: 100%;
+	/* height: 100%; */
 
 	display: flex;
 	flex-direction: column;
@@ -56,7 +57,7 @@ body {
 	box-shadow: 0px 6px 24px palette.$shadow;
 
 	&__section {
-		height: 100%;
+		/* height: 100%; */
 		/* padding: 40px; */
 	}
 
@@ -66,115 +67,5 @@ body {
 
 	&--even {
 		background-color: palette.$light;
-	}
-}
-
-.languages {
-	display: grid;
-	grid-template-rows: repeat(5, 120px);
-
-	@include devices.phone {
-		grid-template-columns: 120px 120px;
-	}
-
-	@include devices.tablet {
-		grid-template-columns: 120px 120px 120px;
-	}
-
-	@include devices.desktop {
-		grid-template-columns: 120px 120px 120px 120px;
-	}
-
-	justify-content: center;
-	list-style: none;
-
-	padding: 0px;
-
-	&__heading {
-		margin: 40px;
-	}
-
-	&__icon {
-		@include defaults.flex-center;
-
-		@include devices.phone {
-			height: 100%;
-			width: 100%;
-		}
-
-		@include devices.tablet {
-			height: 100%;
-			width: 100%;
-		}
-
-		@include devices.desktop {
-			height: 100px;
-			width: 100px;
-		}
-
-		margin: 10px;
-
-		/* color: palette.$highlight; */
-		background-color: palette.$neutral;
-
-		font-size: 72px;
-	}
-}
-
-.about {
-	@include defaults.flex-center;
-	flex-direction: column;
-
-	height: 90vh;
-
-	&__title {
-		display: block;
-	}
-
-	&__subtitle {
-		display: block;
-	}
-
-	&__content {
-		@include defaults.flex-center;
-
-		@include devices.phone {
-			flex-direction: column;
-
-			padding: 10vw;
-		}
-		@include devices.tablet {
-			flex-direction: column;
-
-			padding: 10vw;
-		}
-		@include devices.desktop {
-			flex-direction: row;
-
-			padding: 40px;
-		}
-	}
-
-	&__list {
-		list-style: none;
-	}
-
-	&__image {
-		@include devices.phone {
-			width: 40vw;
-			height: 40vw;
-		}
-		@include devices.tablet {
-			width: 40vw;
-			height: 40vw;
-		}
-		@include devices.desktop {
-			width: 200px;
-			height: 200px;
-		}
-
-		margin: 20px;
-		border: 5px solid white;
-		border-radius: 5px;
 	}
 }

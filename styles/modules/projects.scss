@@ -51,4 +51,21 @@
 			box-shadow: 20px 20px 36px #7d3849, -20px -20px 36px #e76887;
 		}
 	}
+
+	&__link {
+		text-decoration: none;
+		/* & ~ .project__langs {
+			opacity: 0;
+		}
+		&:hover ~ .project__langs {
+			opacity: 100;
+		} */
+	}
+
+	&__langs {
+		display: flex;
+		justify-content: center;
+		font-size: 32px;
+		letter-spacing: 10px;
+	}
 }
