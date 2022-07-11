@@ -35,6 +35,9 @@ body {
 	@include devices.phone {
 		width: 100vw;
 	}
+	@include devices.tablet {
+		width: 100vw;
+	}
 	@include devices.desktop {
 		width: 800px;
 	}
@@ -47,8 +50,8 @@ body {
 
 	color: palette.$highlight;
 	background-color: palette.$light;
-	/* 
-	box-shadow: 0px 6px 24px palette.$shadow; */
+
+	box-shadow: 0px 6px 24px palette.$shadow;
 
 	&__section {
 		height: 100%;
@@ -66,16 +69,46 @@ body {
 
 .languages {
 	display: grid;
-	grid-template-columns: 120px 120px 120px;
+
+	@include devices.phone {
+		grid-template-columns: 120px 120px;
+	}
+
+	@include devices.tablet {
+		grid-template-columns: 120px 120px 120px;
+	}
+
+	@include devices.desktop {
+		grid-template-columns: 120px 120px 120px 120px;
+	}
+
 	justify-content: center;
 
 	list-style: none;
 
+	padding: 0px;
+
+	&__heading {
+		margin: 40px;
+	}
+
 	&__icon {
 		@include defaults.flex-center;
 
-		height: 100px;
-		width: 100px;
+		@include devices.phone {
+			height: 100%;
+			width: 100%;
+		}
+
+		@include devices.tablet {
+			height: 100%;
+			width: 100%;
+		}
+
+		@include devices.desktop {
+			height: 100px;
+			width: 100px;
+		}
 
 		margin: 10px;
 
@@ -105,9 +138,18 @@ body {
 
 		@include devices.phone {
 			flex-direction: column;
+
+			padding: 10vw;
+		}
+		@include devices.tablet {
+			flex-direction: column;
+
+			padding: 10vw;
 		}
 		@include devices.desktop {
 			flex-direction: row;
+
+			padding: 40px;
 		}
 	}
 
@@ -117,6 +159,10 @@ body {
 
 	&__image {
 		@include devices.phone {
+			width: 40vw;
+			height: 40vw;
+		}
+		@include devices.tablet {
 			width: 40vw;
 			height: 40vw;
 		}
@@ -132,8 +178,6 @@ body {
 }
 
 .project {
-	//@extend .body;
-
 	@include defaults.flex-center;
 
 	padding: 40px;
@@ -177,10 +221,22 @@ body {
 	padding: 40px;
 
 	&__list {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		@include devices.phone {
+			grid-template-columns: repeat(1, 1fr);
+			margin: 40px;
+		}
 
-		margin: 40px;
+		@include devices.tablet {
+			grid-template-columns: repeat(1, 1fr);
+			margin: 5vw;
+		}
+
+		@include devices.desktop {
+			grid-template-columns: repeat(3, 1fr);
+			margin: 40px;
+		}
+
 		padding: 0px;
 
 		list-style: none;
@@ -188,6 +244,8 @@ body {
 
 	&__info {
 		@include defaults.flex-center;
+
+		margin: 10px;
 
 		font-size: 128px;
 		text-decoration: none;

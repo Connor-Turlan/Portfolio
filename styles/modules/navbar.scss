@@ -38,18 +38,6 @@
 	&__menu {
 		opacity: 0;
 
-		@include devices.phone {
-			display: block;
-		}
-
-		@include devices.tablet {
-			display: block;
-		}
-
-		@include devices.desktop {
-			display: none;
-		}
-
 		height: 70px;
 		width: 70px;
 
@@ -57,15 +45,44 @@
 
 		order: 1;
 
-		&--label::after {
+		&--label {
 			@include defaults.flex-center;
 
-			align-self: start;
+			position: fixed;
+			top: 0px;
+			right: 0px;
 
-			content: "→";
-			order: 1;
+			align-self: start;
 			height: 70px;
 			width: 70px;
+		}
+
+		@include devices.phone {
+			display: block;
+
+			&--label {
+				display: flex;
+			}
+		}
+
+		@include devices.tablet {
+			display: block;
+
+			&--label {
+				display: flex;
+			}
+		}
+
+		@include devices.desktop {
+			display: none;
+
+			&--label {
+				display: none;
+			}
+		}
+
+		&--label::after {
+			content: "☰";
 		}
 
 		&:checked {
@@ -86,9 +103,7 @@
 				}
 			}
 
-			&--label::after {
-				align-self: start;
-				order: 1;
+			& + .navbar__menu--label::after {
 				content: "X";
 			}
 		}
