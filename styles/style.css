@@ -35,13 +35,75 @@ $accent: #612940; */
   left: 0;
   margin: 20px;
 }
+.navbar__menu {
+  height: 70px;
+  width: 70px;
+  align-self: start;
+  order: 1;
+}
+@media only screen and (max-width: 600px) {
+  .navbar__menu {
+    display: block;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .navbar__menu {
+    display: block;
+  }
+}
+@media only screen and (min-width: 901px) {
+  .navbar__menu {
+    display: none;
+  }
+}
+.navbar__menu:before {
+  content: "\f0c9";
+}
+.navbar__menu:checked {
+  content: "\f0aa";
+  color: #f06586;
+}
+.navbar__menu:checked ~ .navbar__logo {
+  display: none;
+}
+.navbar__menu:checked ~ .navbar__btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100vw;
+}
+.navbar__menu:checked ~ .navbar__btns > .navbar__btn {
+  width: 100%;
+}
+.navbar__btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+@media only screen and (max-width: 600px) {
+  .navbar__btns {
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .navbar__btns {
+    display: none;
+  }
+}
+@media only screen and (min-width: 901px) {
+  .navbar__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .navbar__btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 100%;
-  padding: 20px;
+  width: 200px;
+  height: 70px;
+  /* padding: 20px; */
   text-decoration: none;
   color: #4c3a51;
 }
@@ -93,12 +155,12 @@ body {
   /* 
   box-shadow: 0px 6px 24px palette.$shadow; */
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .body {
     width: 100vw;
   }
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 901px) {
   .body {
     width: 800px;
   }
@@ -150,12 +212,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .about__content {
     flex-direction: column;
   }
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 901px) {
   .about__content {
     flex-direction: row;
   }
@@ -168,13 +230,13 @@ body {
   border: 5px solid white;
   border-radius: 5px;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .about__image {
     width: 40vw;
     height: 40vw;
   }
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 901px) {
   .about__image {
     width: 200px;
     height: 200px;
