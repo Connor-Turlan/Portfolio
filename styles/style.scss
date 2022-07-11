@@ -174,13 +174,38 @@ body {
 }
 
 .contact {
-	display: flex;
-	justify-content: space-between;
-
 	padding: 40px;
 
-	list-style: none;
+	&__list {
+		display: flex;
+		justify-content: space-between;
+
+		margin: 40px;
+		padding: 0px;
+
+		list-style: none;
+	}
 
 	&__info {
+		@include defaults.flex-center;
+
+		font-size: 128px;
+		text-decoration: none;
+
+		&:link {
+			color: palette.$light;
+		}
+
+		&:visited {
+			color: palette.$light;
+		}
+
+		&:hover {
+			color: palette.$highlight;
+		}
+
+		&:active {
+			color: white;
+		}
 	}
 }

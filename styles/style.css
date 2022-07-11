@@ -216,8 +216,31 @@ body {
 }
 
 .contact {
+  padding: 40px;
+}
+.contact__list {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  margin: 40px;
+  padding: 0px;
   list-style: none;
+}
+.contact__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 128px;
+  text-decoration: none;
+}
+.contact__info:link {
+  color: #b25068;
+}
+.contact__info:visited {
+  color: #b25068;
+}
+.contact__info:hover {
+  color: white;
+}
+.contact__info:active {
+  color: white;
 }

@@ -6,6 +6,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Connor Turlan - Contact</title>
 		<link rel="stylesheet" href="../styles/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+
 		<script src="../src/contact.js"></script>
 	</head>
 	<body>
@@ -24,24 +33,34 @@
 					copy email to clipboard - https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
 					linkin and github 
 			-->
-			<section class="body__section body--odd">
+			<section class="body__section body--odd contact">
 				<h1 class="body__heading">Contact me via:</h1>
-				<ul class="contact">
+				<ul class="contact__list">
 					<li
 						id="liEmail"
 						class="contact__info"
 						value="connorturlan@gmail.com"
-						onclick="copyToClipboard()"
+						onclick="copyEmailToClipboard()"
 					>
-						<a href="">connorturlan@gmail.com</a>
+						<a href="" class="contact__info"
+							><i class="fa fa-envelope"></i
+						></a>
 					</li>
 					<li class="contact__info">
-						<a href="https://www.linkedin.com/in/connor-turlan/"
-							>LinkedIn</a
+						<a
+							class="contact__info"
+							href="https://www.linkedin.com/in/connor-turlan/"
 						>
+							<i class="devicon-linkedin-plain-wordmark"></i>
+						</a>
 					</li>
 					<li class="contact__info">
-						<a href="https://github.com/Connor-Turlan">GitHub</a>
+						<a
+							class="contact__info"
+							href="https://github.com/Connor-Turlan"
+						>
+							<i class="devicon-github-original-wordmark"></i>
+						</a>
 					</li>
 				</ul>
 			</section>
