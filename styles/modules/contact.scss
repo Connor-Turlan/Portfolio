@@ -5,6 +5,7 @@
 @use "../modules/defaults.scss";
 
 .contact {
+	height: calc(100vh - 150px);
 	padding: 40px;
 
 	&__list {

@@ -327,6 +327,7 @@ $accent: #612940; */
 }
 
 .contact {
+  height: calc(100vh - 150px);
   padding: 40px;
 }
 .contact__list {
@@ -379,13 +380,12 @@ $accent: #612940; */
 }
 
 body {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.header {
+s .header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -397,7 +397,6 @@ body {
 }
 
 .body {
-  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
