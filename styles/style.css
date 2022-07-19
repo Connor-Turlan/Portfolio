@@ -334,10 +334,10 @@ $accent: #612940; */
   text-decoration: none;
 }
 .project__link:link {
-  color: white;
+  color: #e7ab79;
 }
 .project__link:visited {
-  color: white;
+  color: #e7ab79;
 }
 .project__link:active {
   color: white;
