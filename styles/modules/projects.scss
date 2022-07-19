@@ -69,12 +69,19 @@
 
 	&__link {
 		text-decoration: none;
-		/* & ~ .project__langs {
-			opacity: 0;
+
+		&:link {
+			color: palette.$highlight;
 		}
-		&:hover ~ .project__langs {
-			opacity: 100;
-		} */
+		&:visited {
+			color: palette.$highlight;
+		}
+		&:active {
+			color: palette.$highlight;
+		}
+		&:hover {
+			color: palette.$highlight;
+		}
 	}
 
 	&__langs {

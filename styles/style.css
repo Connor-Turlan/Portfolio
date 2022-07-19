@@ -332,12 +332,18 @@ $accent: #612940; */
 }
 .project__link {
   text-decoration: none;
-  /* & ~ .project__langs {
-  	opacity: 0;
-  }
-  &:hover ~ .project__langs {
-  	opacity: 100;
-  } */
+}
+.project__link:link {
+  color: white;
+}
+.project__link:visited {
+  color: white;
+}
+.project__link:active {
+  color: white;
+}
+.project__link:hover {
+  color: white;
 }
 .project__langs {
   display: flex;
@@ -405,7 +411,7 @@ body {
   align-items: center;
 }
 
-s .header {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
