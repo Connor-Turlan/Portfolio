@@ -321,6 +321,7 @@ $accent: #612940; */
   height: 200px;
   margin: 40px;
   border-radius: 50px;
+  object-fit: cover;
 }
 .project__img--odd {
   background: #774360;
